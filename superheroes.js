@@ -155,7 +155,7 @@ const superheroes = [
     abilities: ["Death Stab", "Twisting Slash"],
     primaryColor: "#808080",
     enemies: ["Wizzard", "Magic Gladiator"],
-    hasCape: false,
+    hasCape: "false",
     weakness: "None",
     speed: 4,
     dob: {
