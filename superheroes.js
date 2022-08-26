@@ -456,6 +456,21 @@ const superheroes = [
     img: "http://abrittabroad.dk/superhero_info/",
   },
   {
+    abilities: ["tekkers", "calmness"],
+    primaryColor: "#800080",
+    enemies: ["Fire Giant, Malinia, The Elden Beast "],
+    hasCape: false,
+    weakness: "too passionate",
+    speed: 69,
+    dob: {
+      month: 2,
+      day: 29,
+      year: 1996,
+    },
+    alias: "The Kitty Killer",
+    img: "https://www.dreamstime.com/stock-images-aggressive-kitten-image7168894",
+  },
+  {
     abilities: ["JS", "Beer"],
     primaryColor: "#808080",
     enemies: ["My kids", "Lasse", "Mathias"],
