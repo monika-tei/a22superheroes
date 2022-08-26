@@ -1,9 +1,21 @@
 const superheroes = [
   {
-    abilities: ["Procarastination", "Mispelling"],
-    enemies: ["Me", "Myself", "I"],
-    alias: "Tom Cruise",
-    weakness: "No-talent.exe",
+    abilities: ["JS", "Beer"],
+    primaryColor: "#808080",
+    enemies: ["My kids", "Lasse", "Mathias"],
+    hasCape: false,
+    weakness: "None",
+    speed: 4,
+    dob: {
+      month: 8,
+      day: 6,
+      year: 2000,
+    },
+    alias: "Lord Destroyer van der Doom",
+    img: "https://static.wikia.nocookie.net/marveldatabase/images/8/82/Destroyer_%28Doom%27s_Creation%29_from_Thor_Vol_1_605_001.jpg/revision/latest/scale-to-width-down/612?cb=20100213174317",
+  },
+  {
+    abilities: ["Invisibility", "silence"],
     primaryColor: "yellowgreen",
     enemies: ["ShovelMan", "Lord Destroyer von Duck"],
     hasCape: true,
@@ -14,6 +26,17 @@ const superheroes = [
       day: 24,
       year: 0,
     },
+    alias: "Invisible Man",
+    img: "https://ats-heritage.co.uk/wp-content/uploads/2016/09/iStock_96204197_XLARGE.jpg",
+  },
+  {
+    abilities: ["Procarastination", "Mispelling"],
+    enemies: ["Me", "Myself", "I"],
+    Mostache: true,
+    CPR: 091101,
+    alias: ["Tom Cruise"],
+    weakness: "No-talent.exe",
+
     img: "https://static.wikia.nocookie.net/onepiece/images/6/66/Shanks_Anime_Infobox.png/revision/latest/scale-to-width-down/1000?cb=20180607083158",
   },
   {
@@ -94,7 +117,7 @@ const superheroes = [
   {
     abilities: ["fighting", "running"],
     primaryColor: "blue",
-    enemies: ["USA", "China"],
+    enimies: ["USA", "China"],
     hasCape: true,
     weakness: "inflation",
     speed: 9,
@@ -122,12 +145,37 @@ const superheroes = [
     img: "data:image/jpeg;base64,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",
   },
   {
+    abilities: ["tekkers", "calmness"],
+
+    primaryColor: ["#800080"],
+
+    enemies: ["Fire Giant, Malinia, The Elden Beast "],
+
+    hasCape: false,
+
+    weakness: ["sleep", "too passionate"],
+
+    speed: 69,
+
+    dob: {
+      month: 2,
+
+      day: 29,
+
+      year: 1996,
+    },
+
+    alias: "The Kitty Killer",
+
+    img: "https://www.dreamstime.com/stock-images-aggressive-kitten-image7168894",
+  },
+  {
     alias: "Jake the Dog",
     abilities: ["Stretchy powers", "Butt-kicking", "Skateboarding"],
     primaryColor: "Yellow",
     enemies: ["The Lich", "Ice King"],
     hasCape: false,
-    weakness: "Sleep",
+    weaknesses: ["Sleep", "Food", "BMO"],
     speed: 1,
     dob: {
       month: "unknown",
@@ -139,7 +187,7 @@ const superheroes = [
   {
     abilities: ["JS", "Beer"],
     primaryColor: "pink",
-    enemies: ["Kids", "Karl"],
+    enimies: ["Kids", "Karl"],
     hasCape: false,
     weakness: "None",
     speed: 4,
@@ -155,7 +203,7 @@ const superheroes = [
     abilities: ["Death Stab", "Twisting Slash"],
     primaryColor: "#808080",
     enemies: ["Wizzard", "Magic Gladiator"],
-    hasCape: false,
+    hasCape: "false",
     weakness: "None",
     speed: 4,
     dob: {
@@ -165,7 +213,7 @@ const superheroes = [
     },
 
     alias: "-SmaShing-",
-    img: "https://muonlione.fandom.com/pl/wiki/Horn_of_Urnii",
+    img: "ttps://muonlione.fandom.com/pl/wiki/Horn_of_Urnii",
   },
   {
     alias: "Koukoumafka",
@@ -175,7 +223,7 @@ const superheroes = [
     hasCape: true,
     weakness: "JS",
     speed: 3,
-    dob: {
+    dod: {
       month: 1,
       day: 21,
       year: 1991,
@@ -186,7 +234,7 @@ const superheroes = [
     abilities: ["claws", "speed"],
     primaryColor: "#000000",
     enemies: ["dogs", "water", "hairball"],
-    hasCape: false,
+    hasCaspe: false,
     weakness: "mice",
     speed: 100,
     dob: {
@@ -218,7 +266,7 @@ const superheroes = [
     enemies: ["Superman", "Batman", "Ironman"],
     hasCape: false,
     weakness: "None",
-    speed: 8,
+    Speed: 8,
     dob: {
       month: 8,
       day: 26,
@@ -231,6 +279,7 @@ const superheroes = [
     abilities: ["Truth", "Love", "Spells"],
     primaryColor: "Pink",
     enemies: ["Liars", "Haters"],
+    friends: ["Owl", "Unicorn"],
     hasCape: true,
     weakness: "None",
     speed: 3,
@@ -243,7 +292,7 @@ const superheroes = [
     img: "https://en.wikipedia.org/wiki/Witchcraft#/media/File:John_William_Waterhouse_-_Magic_Circle.JPG",
   },
   {
-    abilities: ["sweettooth", "great taste", "agility"],
+    ablities: ["sweettooth", "great taste", "agility"],
     primaryColor: "magenta",
     enemies: ["locks", "spoons", "sleepwalkers", "light switches"],
     hasCape: false,
@@ -261,7 +310,7 @@ const superheroes = [
   {
     abilities: ["flying", "reading"], //hard brackets for arrays only
     primaryColor: "Red",
-    enemies: ["Javascrip"],
+    enemies: "Javascrip",
     hasCape: false, //no brackets for boolean
     weakness: "None",
     speed: 4,
@@ -291,7 +340,7 @@ const superheroes = [
   {
     abilities: ["Breathing", "Blinking"],
     primaryColor: "",
-    enemies: ["Winter"],
+    enemies: "Winter",
     hasCape: false,
     weakness: "None",
     speed: 9,
@@ -300,7 +349,7 @@ const superheroes = [
       day: 10,
       year: 1994,
     },
-    alias: "The Least Notorious",
+    allias: "The Least Notorious",
     img: "https://images.unsplash.com/photo-1636247639271-5f9001230a95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80",
   },
   {
@@ -338,7 +387,7 @@ const superheroes = [
     primaryColor: "babyBlue",
     enemies: ["Sarah", "Mioara", "Kamarini", "Sam", "Samuel", "Sam2"],
     hasCape: true,
-    weakness: "dogs",
+    weakness: ["dogs", "food", "plants"],
     speed: 2,
     dob: {
       month: 11,
@@ -351,9 +400,9 @@ const superheroes = [
   },
   {
     alias: "Lady MacDeath",
-    abilities: ["ruthless", "restless b***h face"],
+    abilities: "ruthless, restless b***h face",
     primaryColor: "#00008B",
-    enemies: ["monarchs"],
+    enemies: "monarchs",
     hasCape: false,
     weakness: "husband",
     speed: 8,
@@ -365,11 +414,10 @@ const superheroes = [
     img: "https://writersblockmagazine.files.wordpress.com/2021/07/fbb3e834-2d69-4f34-b97e-3f0e413a94fa.jpeg",
   },
   {
-    alias: "N/A",
     abilities: ["js", "beer", "coding"],
-    primaryColor: "#00000",
+    primarycolour: "#00000",
     enemies: ["my relatives", "my mom.s", "my_partner"],
-    hasCape: false,
+    hascape: false,
     weakness: "none",
     speed: 4,
     dob: {
@@ -377,14 +425,15 @@ const superheroes = [
       day: 14,
       year: 1999,
     },
+    lucian: "matrix god",
     img: "https://i.ytimg.com/vi/HzGUaf1So40/hqdefault.jpg",
   },
   {
     abilities: ["eating", "sleeping"],
     primaryColor: "brown",
-    enemies: ["summer"],
+    enemy: "summer",
     hasCape: false,
-    weakness: "sports",
+    weaknesses: ["sports", "work"],
     speed: 0,
     dob: {
       month: 6,
@@ -397,8 +446,8 @@ const superheroes = [
   },
   {
     alias: "Azula",
-    primaryColor: "Red",
-    enemies: ["My brother", "Peanuts"],
+    priimaryColor: "Red",
+    emenies: ["My brother", "Peanuts"],
     hasCape: false,
     weakness: "JS",
     dob: {
@@ -407,9 +456,7 @@ const superheroes = [
       year: 2000,
     },
     img: "https://www.rotoscopers.com/2014/10/01/villain-vignettes-princess-azula/",
-    abilities: ["shovelling"],
   },
-
   {
     abilities: ["fart", "stinky", "fly"],
     primaryColor: "#964B00",
@@ -425,71 +472,11 @@ const superheroes = [
       year: 2011,
     },
   },
-  {
-    abilities: ["run", "nordicwalking"],
-    primaryColor: "pink",
-    enemies: ["haters", "athletes"],
-    hasCape: true,
-    weakness: "Chocolate",
-    speed: 8,
-    dob: {
-      month: 2,
-      day: 7,
-      year: 1900,
-    },
-    alias: "Miss Girl",
-    img: "https://st4.depositphotos.com/1163454/20986/v/600/depositphotos_209866352-stock-video-superheroine-standing-tall-in-city.mp4",
-  },
-  {
-    abilities: ["Can talk to Komodo Dragons", "Time Travelling Finger"],
-    primaryColor: "#FF4500",
-    hasCape: true,
-    enemies: ["My Girlfriend", "Piers Morgan"],
-    weakness: "terrible at maths",
-    speed: 500000000000000000000000,
-    dob: {
-      month: 11,
-      day: 23,
-      year: 1984,
-    },
-    alias: "The Crimson Benidorm",
-    img: "http://abrittabroad.dk/superhero_info/",
-  },
-  {
-    abilities: ["JS", "Beer"],
-    primaryColor: "#808080",
-    enemies: ["My kids", "Lasse", "Mathias"],
-    hasCape: false,
-    weakness: "None",
-    speed: 4,
-    dob: {
-      month: 8,
-      day: 6,
-      year: 2000,
-    },
-    alias: "Lord Destroyer van der Doom",
-    img: "https://static.wikia.nocookie.net/marveldatabase/images/8/82/Destroyer_%28Doom%27s_Creation%29_from_Thor_Vol_1_605_001.jpg/revision/latest/scale-to-width-down/612?cb=20100213174317",
-  },
-  {
-    abilities: ["Invisibility", "silence"],
-    primaryColor: "yellowgreen",
-    enemies: ["ShovelMan", "Lord Destroyer von Duck"],
-    hasCape: true,
-    weakness: "candy",
-    speed: 100,
-    dob: {
-      month: 12,
-      day: 24,
-      year: 0,
-    },
-    alias: "Invisible Man",
-    img: "https://ats-heritage.co.uk/wp-content/uploads/2016/09/iStock_96204197_XLARGE.jpg",
-  },
 ];
 
-/* alert(
+alert(
   "1. Checking if JS file is linked up correctly. \n2. Always open the inspector/console when woorking with the JS \n3. Write your code in the end of the js-file \n4. Don't use alert boxes for UI... \n5. Delete this message or comment it out"
-); */
+);
 console.table(superheroes);
 
 /* write your code here */
