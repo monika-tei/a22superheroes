@@ -502,9 +502,23 @@ const superheroes = [
   },
 ];
 
-alert(
-  "1. Checking if JS file is linked up correctly. \n2. Always open the inspector/console when woorking with the JS \n3. Write your code in the end of the js-file \n4. Don't use alert boxes for UI... \n5. Comment this line out - using /* */"
-);
-console.table(superheroes);
+// alert(
+//   "1. Checking if JS file is linked up correctly. \n2. Always open the inspector/console when woorking with the JS \n3. Write your code in the end of the js-file \n4. Don't use alert boxes for UI... \n5. Comment this line out - using /* */"
+// );
+// console.table(superheroes);
 
 /* write your code here */
+superheroes.forEach(meetTheHeroes);
+
+function meetTheHeroes(hero) {
+  // console.log(` look who's here, it's ${hero.alias}!`);
+  const template = document.querySelector("template").content;
+  const clone = template.cloneNode(true);
+  //changing part//
+  clone.querySelector("#heroName").textContent = hero.alias;
+  clone.querySelector("#heroInfo").textContent = hero.abilities;
+  clone.querySelector("#heroFlaw").textContent = hero.weakness;
+  //parent and append
+  const parent = document.querySelector("main");
+  parent.appendChild(clone);
+}
